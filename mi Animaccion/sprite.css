@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+body {
+    background-image: url("./back.jpg");
+    background-size: 100% 100vh;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: 'Titan One', cursive;
+
+}
+
+.man {
+    position: absolute;
+    width: 120px;
+    height: 300px;
+
+    background-image: url(./blast.png);
+    margin-top: 500px;
+
+    animation: walk 2s infinite linear, man steps(6) infinite 1s;
+
+}
+
+@keyframes walk {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(1800px);
+    }
+}
+
+@keyframes man {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: 900px;
+    }
+}
+
+.copter {
+    position: absolute;
+    height: 14%;
+    width: 556px;
+    background-image: url(copter.png);
+    position: absolute;
+    animation: fly 3s linear infinite, key 3s steps(4) infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(300px);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(300px);
+    }
+}
+
+@keyframes key {
+    0% {
+        background-position-y: 0px;
+    }
+
+    25% {
+        background-position-y: 449px;
+    }
+
+    50% {
+        background-position-y: 898px;
+    }
+
+    75% {
+        background-position-y: 1347px;
+    }
+
+    100% {
+        background-position-y: 1796px;
+    }
+
+}
+#text{
+    color:red;
+    background-color: transparent ;
+    font-size: 150px;
+    height: 400px;
+    font-family:  'Titan One' ;
+    width: 1000px;
+    position:absolute;
+    right: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: color 5s linear infinite ;
+}
+@keyframes color{
+    0%{
+        color: purple;
+    }
+    25% {
+        color:blue;
+    }
+
+    50% {
+      color: blue ;
+    }
+    75%{
+        color:light plum    ;
+    }
+
+    100% {
+        color: purple ;
+    }
+}
